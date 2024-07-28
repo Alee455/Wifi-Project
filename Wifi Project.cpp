@@ -5,14 +5,14 @@
 using namespace std;
 
 struct User {
-    string Nombre;
-    string Direccion;
+    string Name;
+    string Address;
     string Password;
     string Confirm;
 };
 
 struct UserCredentials {
-    string Nombre;
+    string Name;
     string Password;
 };
 
@@ -66,8 +66,8 @@ void Inicio(int& Opcion, int& Opcion2, User& UserSignUp, UserCredentials& UserLo
 }
 
 void SignUp(User& UserSignUp, int& Opcion2, UserCredentials UserLogin, bool& isRegistered) {
-    cout << "\n\t\tEnter your address : "; cin >> UserSignUp.Direccion;
-    cout << "\t\tEnter new username : "; cin >> UserSignUp.Nombre;
+    cout << "\n\t\tEnter your address : "; cin >> UserSignUp.Address;
+    cout << "\t\tEnter new username : "; cin >> UserSignUp.Name;
     cout << "\t\tEnter new password : "; cin >> UserSignUp.Password;
 
     do {
@@ -101,10 +101,10 @@ void Login(UserCredentials& UserLogin, User UserSignUp, bool isRegistered) {
     cout << "\n\t\t               LOGIN" << endl;
     cout << "\t\t==================================" << endl;
 
-    cout << "\t\tEnter username: "; cin >> UserLogin.Nombre;
-    while (UserSignUp.Nombre != UserLogin.Nombre) {
+    cout << "\t\tEnter username: "; cin >> UserLogin.Name;
+    while (UserSignUp.Name != UserLogin.Name) {
         cout << "\t\tUsers do not match. Please try again." << endl;
-        cout << "\n\t\tEnter username: "; cin >> UserLogin.Nombre;
+        cout << "\n\t\tEnter username: "; cin >> UserLogin.Name;
     }
 
     cout << "\t\tEnter password: "; cin >> UserLogin.Password;
