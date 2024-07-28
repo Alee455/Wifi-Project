@@ -12,8 +12,8 @@ struct User {
 };
 
 struct UserCredentials {
-    string Name;
-    string Password;
+    string NameLogin;
+    string PasswordLogin;
 };
 
 void Inicio(int& Opcion, int& Opcion2, User& UserSignUp, UserCredentials& UserLogin, bool& isRegistered);
@@ -101,16 +101,16 @@ void Login(UserCredentials& UserLogin, User UserSignUp, bool isRegistered) {
     cout << "\n\t\t               LOGIN" << endl;
     cout << "\t\t==================================" << endl;
 
-    cout << "\t\tEnter username: "; cin >> UserLogin.Name;
-    while (UserSignUp.Name != UserLogin.Name) {
+    cout << "\t\tEnter username: "; cin >> UserLogin.NameLogin;
+    while (UserSignUp.Name != UserLogin.NameLogin) {
         cout << "\t\tUsers do not match. Please try again." << endl;
-        cout << "\n\t\tEnter username: "; cin >> UserLogin.Name;
+        cout << "\n\t\tEnter username: "; cin >> UserLogin.NameLogin;
     }
 
-    cout << "\t\tEnter password: "; cin >> UserLogin.Password;
-    while (UserSignUp.Password != UserLogin.Password) {
+    cout << "\t\tEnter password: "; cin >> UserLogin.PasswordLogin;
+    while (UserSignUp.Password != UserLogin.PasswordLogin) {
         cout << "\t\tPasswords do not match. Please try again." << endl;
-        cout << "\n\t\tEnter password: "; cin >> UserLogin.Password;
+        cout << "\n\t\tEnter password: "; cin >> UserLogin.PasswordLogin;
     }
     cout << "\t\t==================================" << endl;
 
