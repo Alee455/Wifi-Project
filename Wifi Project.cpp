@@ -19,7 +19,6 @@ struct UserCredentials {
 void Inicio(int& Opcion, int& Opcion2, User& UserSignUp, UserCredentials& UserLogin, bool& isRegistered);
 void SignUp(User& UserSignUp, int& Opcion2, UserCredentials UserLogin, bool& isRegistered);
 void Login(UserCredentials& UserLogin, User UserSignUp, bool isRegistered);
-void Exit();
 
 int main()
 {
@@ -58,7 +57,7 @@ void Inicio(int& Opcion, int& Opcion2, User& UserSignUp, UserCredentials& UserLo
         }
         break;
     case 3:
-        Exit();
+        cout << "\n\t\tUntil next time!" << endl;
         break;
     default:
         cout << "\n\t\tInvalid option. Please try again." << endl;
@@ -89,7 +88,7 @@ void SignUp(User& UserSignUp, int& Opcion2, UserCredentials UserLogin, bool& isR
         Login(UserLogin, UserSignUp, isRegistered);
     }
     else {
-        Exit();
+        cout << "\n\t\tUntil next time!" << endl;
     }
 }
 
@@ -116,8 +115,4 @@ void Login(UserCredentials& UserLogin, User UserSignUp, bool isRegistered) {
     cout << "\t\t==================================" << endl;
 
     cout << "\n\t\tLogin successful!" << endl;
-}
-
-void Exit() {
-    cout << "\n\t\tUntil next time!" << endl;
 }
